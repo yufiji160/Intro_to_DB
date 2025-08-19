@@ -21,14 +21,13 @@ CREATE TABLE Customers (
     customer_name VARCHAR(215) NOT NULL,
     email VARCHAR(215) UNIQUE NOT NULL,
     address TEXT(255)
-    FOREIGN KEY(customer_id) REFERENCES (customer_id)
- );
+);
 
 CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
-    FOREIGN KEY (customer_id) REFERENCES CUSTOMERS(customer_id)
+    FOREIGN KEY (customer_id) REFERENCES Orders(order_id)
 );
 
 CREATE TABLE Order_details (
