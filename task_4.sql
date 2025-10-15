@@ -1,6 +1,6 @@
 USE alx_book_store;
 
-CREATE TABLE Customer (
+CREATE TABLE customer (
     customer_id INT NOT NULL AUTO_INCREMENT,
     customer_name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
